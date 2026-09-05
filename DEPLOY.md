@@ -85,8 +85,9 @@ A 404 almost always means the repo is named wrong. Fix that before going further
 
 ## 5. Add the website to Google Play
 
-Play Console → your app → **Grow → Store presence → Store listing** →
-**Store listing contact details** → **Website**:
+Play Console → your app → **Grow → Store presence → Store settings**
+(NOT "Main store listing" — the contact fields live one menu item below it) →
+**Store listing contact details** → **Edit** → **Website**:
 
 ```
 https://anilpadheriya-1.github.io
