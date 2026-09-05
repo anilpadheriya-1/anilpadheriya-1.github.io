@@ -4,7 +4,14 @@ This folder is the **developer website** for *Doodle Merge: Notebook Wars*. Its 
 existing is that AdMob cannot verify `app-ads.txt` until Google Play has a developer website URL
 for the app, and the file is served from the **root** of that website.
 
-Do not upload this `DEPLOY.md` — it is notes for you, not part of the site. (Harmless if you do.)
+This file is committed alongside the site. It is notes, not a page — harmless to publish.
+
+---
+
+> **STATUS — 5 September 2026: steps 1-4 are DONE.** The site is live at
+> <https://anilpadheriya-1.github.io> and `https://anilpadheriya-1.github.io/app-ads.txt`
+> returns `200 text/plain` with the correct single line. **Only steps 5 and 6 remain**, and
+> both are console work: add the website to the Play listing, then tell AdMob to re-crawl.
 
 ---
 
@@ -15,10 +22,10 @@ GitHub Pages only puts files at the domain root for a **user site**:
 
 | Repo name | Site URL | app-ads.txt ends up at | Works? |
 |---|---|---|---|
-| `<your-username>.github.io` | `https://<your-username>.github.io/` | `/app-ads.txt` | **yes** |
-| anything else | `https://<your-username>.github.io/<repo>/` | `/<repo>/app-ads.txt` | **no — 404** |
+| `anilpadheriya-1.github.io` | `https://anilpadheriya-1.github.io/` | `/app-ads.txt` | **yes** |
+| anything else | `https://anilpadheriya-1.github.io/<repo>/` | `/<repo>/app-ads.txt` | **no — 404** |
 
-**Name the repository exactly `<your-github-username>.github.io`.** Lowercase. Nothing else.
+**Name the repository exactly `anilpadheriya-1.github.io`.** Lowercase. Nothing else.
 This is the mistake that wastes a week.
 
 ---
@@ -26,7 +33,7 @@ This is the mistake that wastes a week.
 ## 1. Create the repo
 
 1. Go to <https://github.com/new>.
-2. Repository name: `<your-username>.github.io` (substitute your real username).
+2. Repository name: `anilpadheriya-1.github.io`.
 3. Visibility: **Public** (GitHub Pages needs public on the free plan).
 4. Do not add a README, .gitignore or licence — keep it empty.
 5. Create repository.
@@ -52,7 +59,7 @@ cd "E:/DOODLE MERGE NOTEBOOK WARS/site"
 git init -b main
 git add -A
 git commit -m "Developer website for Doodle Merge: Notebook Wars"
-git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
+git remote add origin https://github.com/anilpadheriya-1/anilpadheriya-1.github.io.git
 git push -u origin main
 ```
 
@@ -64,7 +71,7 @@ Save. Wait for the green *"Your site is live at ..."* banner (usually under a mi
 ## 4. Verify the file before touching Play
 
 ```bash
-curl -sS -D- https://<your-username>.github.io/app-ads.txt
+curl -sS -D- https://anilpadheriya-1.github.io/app-ads.txt
 ```
 
 You need **all** of these:
@@ -82,7 +89,7 @@ Play Console → your app → **Grow → Store presence → Store listing** →
 **Store listing contact details** → **Website**:
 
 ```
-https://<your-username>.github.io
+https://anilpadheriya-1.github.io
 ```
 
 Root only. No trailing path, no `/index.html`. Save, then **send the listing for review**.
