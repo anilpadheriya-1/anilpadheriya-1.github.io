@@ -8,10 +8,14 @@ This file is committed alongside the site. It is notes, not a page — harmless 
 
 ---
 
-> **STATUS — 5 September 2026: steps 1-4 are DONE.** The site is live at
-> <https://anilpadheriya-1.github.io> and `https://anilpadheriya-1.github.io/app-ads.txt`
-> returns `200 text/plain` with the correct single line. **Only steps 5 and 6 remain**, and
-> both are console work: add the website to the Play listing, then tell AdMob to re-crawl.
+> **STATUS — 7 September 2026: COMPLETE. AdMob reports "App verification: Verified".**
+> The site is live at <https://anilpadheriya-1.github.io>, `/app-ads.txt` returns
+> `200 text/plain` with the correct line, the Website field is published on the Play listing,
+> and AdMob's crawl has succeeded. AdMob's Approval status also moved from "Requires review"
+> to "Getting ready", which is what lifts the "Limited ad serving" cap.
+>
+> The steps below are kept as the record of how it was done, and as the runbook if the file
+> ever needs changing (see Notes at the end).
 
 ---
 
@@ -93,16 +97,17 @@ Play Console → your app → **Grow → Store presence → Store settings**
 https://anilpadheriya-1.github.io
 ```
 
-Root only. No trailing path, no `/index.html`. Save, then **send the listing for review**.
-The URL is not public until that review clears, and AdMob cannot see it before then.
+Root only. No trailing path, no `/index.html`, no `www.`. The dialog's own footer says
+**"Changes made will be published to Google Play immediately"** — this field does NOT go through
+listing review, so it appears on the public store page within moments of saving.
 
 ## 6. Tell AdMob to re-crawl
 
 AdMob → **Apps → Doodle Merge: Notebook Wars → App settings → app-ads.txt → Check for updates**.
 
-Expect a wait. The Play listing has to go live first (hours), and AdMob's crawl can take up to
-24 hours after that; it also re-crawls on its own roughly weekly. "Not verified" immediately after
-you click is normal and not a sign anything is broken.
+The button is at **App settings → App verification → Verify app → Check for updates**.
+"Not verified" immediately after clicking is normal — the crawl is asynchronous. In practice it
+completed within a day; Google allows up to 24 h and re-crawls weekly on its own.
 
 ---
 
